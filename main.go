@@ -114,7 +114,7 @@ func main() {
 		return
 	}
 
-	root := "/home/kwandapchumba/Pictures/all_phones"
+	root := "/home/kwandapchumba/Pictures/SIMU"
 
 	items, err := utils.GetItems(root)
 	if err != nil {

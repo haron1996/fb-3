@@ -10,7 +10,7 @@ import (
 )
 
 var (
-	duration = 100 * time.Microsecond
+	duration = 20 * time.Microsecond
 )
 
 func ListItems(browser *rod.Browser, page *rod.Page, phones []item) error {

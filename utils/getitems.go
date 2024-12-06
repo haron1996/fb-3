@@ -61,7 +61,7 @@ func GetItems(root string) ([]item, error) {
 
 			switch {
 			case strings.HasPrefix(line, "title:"):
-				title = strings.TrimSpace(line[len("title:"):])
+				title = strings.ToUpper(strings.TrimSpace(line[len("title:"):]))
 			case strings.HasPrefix(line, "price:"):
 				price = strings.TrimSpace(line[len("price:"):])
 			case strings.HasPrefix(line, "category"):
@@ -69,9 +69,9 @@ func GetItems(root string) ([]item, error) {
 			case strings.HasPrefix(line, "condition"):
 				condition = strings.ToLower(strings.TrimSpace(line[len("condition:"):]))
 			case strings.HasPrefix(line, "description:"):
-				description = strings.TrimSpace(line[len("description:"):])
+				description = strings.ToUpper(strings.TrimSpace(line[len("description:"):]))
 			case strings.HasPrefix(line, "tags:"):
-				tagsString = strings.TrimSpace(line[len("tags:"):])
+				tagsString = strings.ToUpper(strings.TrimSpace(line[len("tags:"):]))
 			}
 		}
 
